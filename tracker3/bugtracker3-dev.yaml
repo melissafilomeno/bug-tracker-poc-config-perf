@@ -1,8 +1,4 @@
 spring:
-  docker:
-    compose:
-      enabled: true
-      file: docker-compose.yml
   jpa:
     hibernate:
       ddl-auto:
@@ -11,12 +7,14 @@ spring:
     url:
       jdbc:mysql://localhost:3307/mydb
     username:
-      bug_user
+      "{cipher}52b6a6a21bf9c1aa13b3259a69a7cb26a9f556fe4a4161d6e3b90c530952c5d5"
     password:
-      "{cipher}194056989242c61fadeff4262dcc9952e422dc096287ce683cdc21366e853c42"
+      "{cipher}3504f4d7fb338692fbe152bed2f5a746f7f97688cb2aa078cfb8aa85ae252c30"
     driver-class-name:
       com.mysql.cj.jdbc.Driver
 management:
   endpoint:
     env:
+      show-values: always
+    configprops:
       show-values: always
